@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="rus">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Forest Auto - Car Sales</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
+
 <body>
     <header class="site-header">
         <div class="logo">
@@ -33,86 +36,252 @@
                 <ul class="brand-items">
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Alfa romeo
-                        <span class="brand-counter">30</span>
+                            <span class="brand-counter">30</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Dodge
-                        <span class="brand-counter">55</span>
+                            <span class="brand-counter">55</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Infinity
-                        <span class="brand-counter">145</span>
+                            <span class="brand-counter">145</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Mercedes-Benz
-                        <span class="brand-counter">3719</span>
+                            <span class="brand-counter">3719</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Skoda
-                        <span class="brand-counter">1325</span>
+                            <span class="brand-counter">1325</span>
                         </a>
                     </li>
                 </ul>
                 <ul class="brand-items">
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Alfa romeo
-                        <span class="brand-counter">30</span>
+                            <span class="brand-counter">30</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Dodge
-                        <span class="brand-counter">55</span>
+                            <span class="brand-counter">55</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Infinity
-                        <span class="brand-counter">145</span>
+                            <span class="brand-counter">145</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Mercedes-Benz
-                        <span class="brand-counter">3719</span>
+                            <span class="brand-counter">3719</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Skoda
-                        <span class="brand-counter">1325</span>
+                            <span class="brand-counter">1325</span>
                         </a>
                     </li>
-                </ul> 
+                </ul>
                 <ul class="brand-items">
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Alfa romeo
-                        <span class="brand-counter">30</span>
+                            <span class="brand-counter">30</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Dodge
-                        <span class="brand-counter">55</span>
+                            <span class="brand-counter">55</span>
                         </a>
                     </li>
                     <li class="brand-item">
-                        <a class="brand-link"href="#"> Infinity
-                        <span class="brand-counter">145</span>
+                        <a class="brand-link" href="#"> Infinity
+                            <span class="brand-counter">145</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Mercedes-Benz
-                        <span class="brand-counter">3719</span>
+                            <span class="brand-counter">3719</span>
                         </a>
                     </li>
                     <li class="brand-item">
                         <a class="brand-link" href="#"> Skoda
-                        <span class="brand-counter">1325</span>
+                            <span class="brand-counter">1325</span>
                         </a>
                     </li>
-                </ul>  
+                </ul>
             </div>
-            <div class="search"> 
+            <div class="search-dropdowns">
+                <div class="dropdown-first">
+                    <input type="button" onclick="searchDropdown(event)" id="car-brand-btn" class="search-dropbtn"
+                        value="Марка">
+                    <div id="searchDropdown" class="search-dropdown-content">
+                        <input type="text" placeholder="Поиск..." id="searchInput" onkeyup="searchFilterFunction()">
+                        <a onclick="brandClick(event)" id="Любой">Любой</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo">Alfa romeo</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo1">Alfa romeo1</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo2">Alfa romeo2</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo3">Alfa romeo3</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo4">Alfa romeo4</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo5">Alfa romeo5</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo5">Alfa romeo5</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo5">Alfa romeo5</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo5">Alfa romeo5</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo5">Alfa romeo5</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo5">Alfa romeo5</a>
+                        <a onclick="brandClick(event)" id="Alfa romeo5">Alfa romeo5</a>
+                    </div>
+                </div>
+                <div class="dropdown-second">
+                    <input type="button" onclick="searchOther(event)" id="car-model-btn" class="not-allowed-button"
+                        value="Модель">
+                    <div id="otherDropdown" class="other-content">
+                        <input type="text" placeholder="Поиск" id="otherInput" onkeyup="otherFilterFunction()">
+                        <a onclick="modelClick(event)" id="Любой" href="#about">Любой</a>
+                        <a onclick="modelClick(event)" id="1" href="#base">Base</a>
+                        <a onclick="modelClick(event)" id="2" href="#blog">Blog</a>
+                        <a onclick="modelClick(event)" id="3" href="#contact">Contact</a>
+                        <a onclick="modelClick(event)" id="4" href="#custom">Custom</a>
+                        <a onclick="modelClick(event)" id="5" href="#support">Support</a>
+                        <a onclick="modelClick(event)" id="6" href="#tools">Tools</a>
+                        <a onclick="modelClick(event)" id="7" href="#tools">Tools</a>
+                        <a onclick="modelClick(event)" id="8" href="#tools">Tools</a>
+                        <a onclick="modelClick(event)" id="9" href="#tools">Tools</a>
+                        <a onclick="modelClick(event)" id="10" href="#tools">Tools</a>
+                        <a onclick="modelClick(event)" id="11" href="#tools">Tools</a>
+                    </div>
+                </div>
+                <div class="dropdown-third">
+                    <input type="button" onclick="searchThird(event)" id="car-generation-btn" class="not-allowed-button"
+                        value="Поколение"></input>
+                    <div id="thirdDropdown" class="third-content">
+                        <input type="text" placeholder="Поиск" id="thirdInput" onkeyup="thirdFilterFunction()">
+                        <a onclick="thirdClick(event)" href="#about" id="Любой">Любой</a>
+                        <a onclick="thirdClick(event)" href="#base" id="1">Base</a>
+                        <a onclick="thirdClick(event)" href="#blog" id="2">Blog</a>
+                        <a onclick="thirdClick(event)" href="#contact" id="3">Contact</a>
+                        <a href="#custom">Custom</a>
+                        <a href="#support">Support</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                    </div>
+                </div>
+            </div>
+            <div class="search-additional">
+                <div class="dropdown-fourth">
+                    <input type="button" onclick="searchFourth()" class="search-fourth-dropbtn" value="Год от"></input>
+                    <div id="fourthDropdown" class="fourth-content">
+                        <a onclick="fourthClick(event)" href="#about" id="Любой">Любой</a>
+                        <a onclick="fourthClick(event)" href="#base" id="1">Base</a>
+                        <a onclick="fourthClick(event)" href="#blog" id="2">Blog</a>
+                        <a onclick="fourthClick(event)" href="#contact" id="3">Contact</a>
+                        <a href="#custom">Custom</a>
+                        <a href="#support">Support</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                    </div>
+                </div>
+                <div class="dropdown-fivth">
+                    <input type="button" onclick="searchFivth()" class="search-fivth-dropbtn" value="до"></input>
+                    <div id="fivthDropdown" class="fivth-content">
+                        <a onclick="fivthClick(event)" href="#about" id="Любой">Любой</a>
+                        <a onclick="fivthClick(event)" href="#base" id="1">Base</a>
+                        <a onclick="fivthClick(event)" href="#blog" id="2">Blog</a>
+                        <a onclick="fivthClick(event)" href="#contact" id="3">Contact</a>
+                        <a href="#custom">Custom</a>
+                        <a href="#support">Support</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                    </div>
+                </div>
+                <div class="dropdown-sixth">
+                    <input type="button" onclick="searchSixth()" class="search-sixth-dropbtn" value="Цена от"></input>
+                    <div id="sixthDropdown" class="sixth-content">
+                        <a onclick="sixthClick(event)" href="#about" id="Любой">Любой</a>
+                        <a onclick="sixthClick(event)" href="#base" id="1">Base</a>
+                        <a onclick="sixthClick(event)" href="#blog" id="2">Blog</a>
+                        <a onclick="sixthClick(event)" href="#contact" id="3">Contact</a>
+                        <a href="#custom">Custom</a>
+                        <a href="#support">Support</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                    </div>
+                </div>
+                <div class="dropdown-seventh">
+                    <input type="button" onclick="searchSeventh()" class="search-seventh-dropbtn" value="до"></input>
+                    <div id="seventhDropdown" class="seventh-content">
+                        <a onclick="seventhClick(event)" href="#about" id="Любой">Любой</a>
+                        <a onclick="seventhClick(event)" href="#base" id="1">Base</a>
+                        <a onclick="seventhClick(event)" href="#blog" id="2">Blog</a>
+                        <a onclick="seventhClick(event)" href="#contact" id="3">Contact</a>
+                        <a href="#custom">Custom</a>
+                        <a href="#support">Support</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                    </div>
+                </div>
+                <div class="dropdown-eight">
+                    <input type="button" onclick="searchEight()" class="search-eight-dropbtn" value="Объем от"></input>
+                    <div id="eightDropdown" class="eight-content">
+                        <a onclick="eigthClick(event)" href="#about" id="Любой">Любой</a>
+                        <a onclick="eigthClick(event)" href="#base" id="1">Base</a>
+                        <a onclick="eigthClick(event)" href="#blog" id="2">Blog</a>
+                        <a onclick="eigthClick(event)" href="#contact" id="3">Contact</a>
+                        <a href="#custom">Custom</a>
+                        <a href="#support">Support</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                    </div>
+                </div>
+                <div class="dropdown-ninth">
+                    <input type="button" onclick="searchNinth()" class="search-ninth-dropbtn" value="до"></input>
+                    <div id="ninthDropdown" class="ninth-content">
+                        <a onclick="ninthClick(event)" href="#about" id="Любой">Любой</a>
+                        <a onclick="ninthClick(event)" href="#base" id="1">Base</a>
+                        <a onclick="ninthClick(event)" href="#blog" id="2">Blog</a>
+                        <a onclick="ninthClick(event)" href="#contact" id="3">Contact</a>
+                        <a href="#custom">Custom</a>
+                        <a href="#support">Support</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#tools">Tools</a>
+                    </div>
+                </div>
+            </div>
+            <div class="search-downpanel">
+                <a onclick="clearAll()" class="clear-button">Сбросить</a>
+                <button class="button-64" role="button"><span class="text">Показать объявления</span></button>
             </div>
             <div class="car-ads">
                 <h2 class="ads-title">Вам также может быть интересно:</h2>
@@ -240,4 +409,6 @@
         </div>
     </div>
 </body>
+<script src="script.js"></script>
+
 </html>
